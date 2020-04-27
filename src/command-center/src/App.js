@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import MyBox from './my_container';
+// import Button from './Button';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+
 import logo from './banana.png';
+
 import './App.css';
 
-const Child = ({ match }) => (
+const Child = ({ match }) => console.log('match', match) || (
   <div>
     <h3>You are here @{match.params.id}</h3>
   </div>
@@ -33,6 +37,7 @@ class App extends Component {
           </div>
           <Route path="/:id" component={Child} />
         </div>
+        <MyBox />
       </Router>
     );
   }
