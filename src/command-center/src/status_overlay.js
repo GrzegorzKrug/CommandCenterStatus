@@ -21,7 +21,7 @@ export default class StatusOverlay extends Component {
                     <aside className="column1">
                         <Container className="db_buttons">Test1</Container>
                         <Container className="db_stats">Test2</Container>
-                        <Container className="db_sometext"><img className='App-logo' width='30%' src={require("./banana.png")}/> </Container>
+                        <Container className="db_sometext"><img className='App-logo' width='25%' src={require("./banana.png")}/> </Container>
                     </aside>
                     <aside className="column2">
                         <Container className="github_buttons">Test1</Container>

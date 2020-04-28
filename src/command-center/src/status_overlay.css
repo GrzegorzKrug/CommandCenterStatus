@@ -119,12 +119,12 @@ body {
 }
 
 .db_sometext {
-  padding: 5px;
+  padding: 10px;
   background-color: rgb(255, 145, 71);
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 5s linear;
+  animation: App-logo-spin infinite 7s linear;
   height: 100px;
   padding: 10px;
 }
