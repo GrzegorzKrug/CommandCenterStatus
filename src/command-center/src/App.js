@@ -27,17 +27,8 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Welcome traveler</h2>
           </div>
-          <div className="Content-Table">
-            <ul>
-              <li><Link to='/netlifx'>Netflix</Link></li>
-              <li><Link to='/discord'>Discord</Link></li>
-              <li><Link to='/gitlab'>Gitlab</Link></li>
-              <li><Link to='/yahoo'>Yahoo</Link></li>
-            </ul>
-          </div>
           <Route path="/:id" component={Child} />
         </div>
-        <MyBox />
       </Router>
     );
   }
