@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import MyBox from './my_container';
-// import Button from './Button';
+import StatusOverlay from './status_overlay';
+
+
 import {
   BrowserRouter as Router,
   Route,
@@ -26,7 +27,11 @@ class App extends Component {
           <div className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Welcome traveler</h2>
+          </div>          
+          <StatusOverlay />
+          <div className="Content-Table">
           </div>
+
           <Route path="/:id" component={Child} />
         </div>
       </Router>

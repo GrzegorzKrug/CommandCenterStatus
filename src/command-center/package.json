@@ -5,6 +5,7 @@
   "dependencies": {
     "@progress/kendo-ui": "^2020.1.406",
     "bootstrap": "^4.4.1",
+    "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
