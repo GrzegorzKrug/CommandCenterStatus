@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyBox from './my_container';
+import Status_overlay from './status_overlay';
 // import Button from './Button';
 import {
   BrowserRouter as Router,
@@ -22,11 +23,13 @@ class App extends Component {
   render() {
     return (
       <Router>
+
         <div className="App">
           <div className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Welcome traveler</h2>
           </div>
+          <Status_overlay />
           <div className="Content-Table">
             <ul>
               <li><Link to='/netlifx'>Netflix</Link></li>
