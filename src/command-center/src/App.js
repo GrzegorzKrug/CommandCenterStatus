@@ -8,7 +8,7 @@ import {
   Link
 } from 'react-router-dom';
 
-import logo from './banana.png';
+
 
 import './App.css';
 
@@ -23,17 +23,8 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome traveler</h2>
-          </div>          
-          <StatusOverlay />
-          <div className="Content-Table">
-          </div>
-
-          <Route path="/:id" component={Child} />
-        </div>
+        <StatusOverlay />
+        <Route path="/:id" component={Child} />
       </Router>
     );
   }

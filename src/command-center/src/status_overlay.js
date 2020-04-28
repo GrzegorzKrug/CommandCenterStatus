@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
-// import { Container, Row, Col } from 'react-bootstrap/Container';
+import logo from './banana.png';
 import './status_overlay.css';
+import { Container } from 'react-bootstrap';
+import get_time from './functions/get_time';
+
 
 export default class StatusOverlay extends Component {
     render() {
         return (
-            <div className="wrapper">
-                <header className="header">Header</header>
-                <article className="main">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                </article>
-                <aside className="aside aside-1">Aside 1</aside>
-                <aside className="aside aside-2">Aside 2</aside>
-                <footer className="footer">Footer</footer>
+            <div className="overlay">
+                <header className="header">
+                    <aside className="title">                      
+                            Welcome traveler                        
+                    </aside>
+                    <aside className="clock">
+                        {get_time()}
+                    </aside>
+                </header>
+                <div className="tablebody">
+                    <aside className="column1">
+                        <Container className="db_buttons">Test1</Container>
+                        <Container className="db_stats">Test2</Container>
+                        <Container className="db_sometext"><img className='App-logo' width='30%' src={require("./banana.png")}/> </Container>
+                    </aside>
+                    <aside className="column2">
+                        <Container className="github_buttons">Test1</Container>
+                        <Container className="github_readme">Test2</Container>
+                    </aside>
+                    <aside className="column3">
+                        <Container className="github_last_repos">Test3</Container>
+                        <Container className="github_grpahs">Test3</Container>
+                    </aside>
+                </div>
             </div>
         )
     }
