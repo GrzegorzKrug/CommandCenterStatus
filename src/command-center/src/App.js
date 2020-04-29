@@ -22,10 +22,12 @@ const Child = ({ match }) => console.log('match', match) || (
 class App extends Component {
   render() {
     return (
-      <Router>
+      <div>
         <StatusOverlay />
-        <Route path="/:id" component={Child} />
-      </Router>
+        <Router>
+          <Route path="/:id" component={Child} />
+        </Router>
+      </div>
     );
   }
 }
