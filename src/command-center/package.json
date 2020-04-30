@@ -10,7 +10,8 @@
     "react-chartkick": "^0.4.0",    
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",    
-    "recharts": "^1.8.5"
+    "recharts": "^1.8.5",
+    "react-scripts": "0.9.5"
   },
   "devDependencies": {},
   "scripts": {
