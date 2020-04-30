@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { Chart } from 'react-charts';
 import { LineChart, PieChart } from 'react-chartkick'
 import "./graphs.css"
+
 import "chart.js"
 
 
@@ -44,18 +45,27 @@ import "chart.js"
 //     )
 // }
 function MyKickChart() {
-    // const data = React.memo(
-    //     () =>
-    //         [{ "0": 1 }, { "1": 1 }],
-    //     []
+    const my_data = [
+        { name: "Line-1", color: "#4DF", data: Getdata(-0.01, 0.4, 2, 0, 10) },
+        { name: "Line-2", color: "#03B", data: Getdata(0.01, -1, 0.5, 1, 10) }
+    ]
 
-    // )
+
+    console.log("My data", my_data)
     return (
-        <LineChart data={[
-            { name: "Line1", data: { "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 3, "6": 2, "7": 4, "8": 5, "9": 6, "10": 4 } },
-            { name: "Line2", data: { "0": 0, "1": -1, "2": -2, "3": -3, "4": -1, "5": 0, "6": 2, "7": 1, } }
-        ]} />
+        <LineChart data={my_data} />
     )
+}
+
+function Getdata(a3, a2, a1, a0, x) {
+    var new_vect = {}
+    for (let i = 0; i < x; i++) {
+        // i = i / 100
+
+        new_vect[i] = i * a1 + a0 + i * i * i * a3
+    }
+
+    return new_vect
 }
 
 export class LineGraph extends Component {
