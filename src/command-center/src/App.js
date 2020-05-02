@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div>
         <StatusOverlay />
-        <Router>
+        <Router>                              
           <Route path="/:id" component={Child} />
         </Router>
       </div>

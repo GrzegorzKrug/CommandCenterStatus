@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import MiniClock from './components/clock';
 import { LineGraph } from './components/graphs';
-
+import RestartButton from './components/my_buttons.js';
 
 import './status_overlay.css';
 
@@ -12,6 +12,9 @@ export default class StatusOverlay extends Component {
         return (
             <div className="overlay">
                 <header className="header">
+                    <aside className="restart-button">
+                        <RestartButton />
+                    </aside>
                     <aside className="title">
                         Welcome traveler
                     </aside>
@@ -31,7 +34,10 @@ export default class StatusOverlay extends Component {
                     </aside>
                     <aside className="column3">
                         <div className="github_last_repos">Test3</div>
-                        <div className="github_graphs"><LineGraph /></div>
+                        <div className="github_graphs">
+                            <p>Graph</p>
+                            <LineGraph />
+                        </div>
                     </aside>
                 </div>
             </div>

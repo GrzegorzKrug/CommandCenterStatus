@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   font-weight: bold;
   text-align: center;
+  background-color: #025;
 }
 
 .overlay>* {
@@ -17,22 +18,29 @@
   /* padding: 5px; */
 }
 
+.restart-button {
+  flex: 1 35px;
+  margin: 3px;
+  padding: 1px;
+  
+  background-color: #349;
+}
+
 .title {
   /* display: flex; */
   flex: 1 80%;
   background-color: #24A;
-  margin: 2px;
+  margin: 3px;
   text-align: center;
 }
 
 .clock {
-  flex: 1 20%;
+  flex: 1 10%;
   color: rgb(255, 212, 131);
   white-space: pre-wrap;
   background-color: #24A;
-  margin: 2px;
+  margin: 3px;
 }
-
 
 /* .main {
   text-align: left;
@@ -52,25 +60,23 @@
     display: flex;
   }
   .column1 {
-    flex: 1 33%;
+    flex: 1 25%;
   }
   .column2 {
-    flex: 1 33%;
+    flex: 1 25%;
   }
   .column3 {
-    flex: 1 33%;
+    flex: 1 50%;
   }
   .tablebody {
     display: flex;
   }
 }
 
-body {
-  padding: 2em;
-}
 
 .tablebody {
-  background-color: rgb(40, 18, 102);
+  background-color: #24A;
+  margin: 4px;
   padding: 0.5%;
 }
 
@@ -85,7 +91,7 @@ body {
 }
 
 .column3 {
-  background-color: chartreuse;
+  /* background-color: rgb(3, 99, 0); */
   margin: 2px;
 }
 
@@ -102,8 +108,17 @@ body {
   background-color: rgb(255, 145, 71);
 }
 
-.github_graphs{
-  background-color: white;
+.github_last_repos {
+  background-color: rgb(116, 225, 90);
+  /* margin-top: 5px; */
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.github_graphs {
+  background-color: rgb(180, 255, 140);
+  border-radius: 0.7cm;
+  border: violet;
 }
 
 .App-logo {
