@@ -16,7 +16,7 @@ export default class StatusOverlay extends Component {
                         <RestartButton />
                     </aside>
                     <aside className="title">
-                        Welcome traveler
+                        Welcome
                     </aside>
                     <aside className="clock">
                         <MiniClock />

@@ -22,8 +22,8 @@
   flex: 1 35px;
   margin: 3px;
   padding: 1px;
-  
-  background-color: #349;
+  align-content: center;
+  /* background-color: #349; */
 }
 
 .title {
@@ -55,7 +55,7 @@
   background: hotpink;
 } */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 1000px) {
   .header {
     display: flex;
   }
@@ -78,6 +78,7 @@
   background-color: #24A;
   margin: 4px;
   padding: 0.5%;
+  border-radius: 10px;
 }
 
 .column1 {
@@ -111,7 +112,8 @@
 .github_last_repos {
   background-color: rgb(116, 225, 90);
   /* margin-top: 5px; */
-  border-radius: 30px;
+  border-radius: 15px;
+  border-bottom-left-radius: 80%;
   padding: 20px;
 }
 
@@ -136,3 +138,4 @@
     transform: rotate(360deg);
   }
 }
+
