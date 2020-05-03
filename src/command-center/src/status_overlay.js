@@ -13,7 +13,7 @@ export default class StatusOverlay extends Component {
             <div className="overlay">
                 <header className="header">
                     <aside className="restart-button">
-                        <RestartButton />
+                        <RestartButton onPress={this.props.onRestart} />
                     </aside>
                     <aside className="title">
                         Hello

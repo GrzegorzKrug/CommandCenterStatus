@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
+
+
 import StatusOverlay from './status_overlay';
 import './App.css';
+
+// import { helloSaga } from './sagas'
+
 
 
 class App extends Component {
@@ -10,14 +15,20 @@ class App extends Component {
     super(props);
   }
 
-  render() {
+  render() {    
     return (
-      <div>
-        <StatusOverlay />
-      </div>
+      <StatusOverlay />
     );
   }
 }
 
-export default connect(  
+const mapDispachToProps = dispatch => {
+  return {
+    onRestart: () => dispatch({ type: "RESTART", }),
+  };
+};
+
+
+export default connect(
+  mapDispachToProps
 )(App);

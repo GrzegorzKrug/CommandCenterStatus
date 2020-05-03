@@ -32,12 +32,11 @@ function FlatButton({ onPress }) {
 export default class RestartButton extends Component {
     constructor(props) {
         super(props);
-        this.restart_function = this.restart_function.bind(this);
     }
 
-    render() {
+    render(onPress) {
         return (
-            <FlatButton onPress={this.restart_function} />
+            <FlatButton onPress={this.dummy_press}/>
         )
     }
 
@@ -45,16 +44,8 @@ export default class RestartButton extends Component {
     //     // Load list first time
     //     this.props.onRestart()
     // }
-
-    restart_function() {
+    dummy_press() {
         console.log("CLICKED");
     }
 }
 
-
-
-const mapDispathToProps = dispatch => {
-    return {
-        onRestart: () => dispatch({ type: "ADD_COUNTER" })
-    }
-}
