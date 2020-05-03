@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Chart } from 'react-charts';
-import { LineChart, PieChart } from 'react-chartkick'
+import { LineChart } from 'react-chartkick'
 import "./graphs.css"
 
 import "chart.js"

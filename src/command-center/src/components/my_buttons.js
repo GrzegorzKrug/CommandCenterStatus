@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import {
-    Button, Image,
-    StyleSheet, TouchableOpacity, Text, View
+    Image, StyleSheet, TouchableOpacity, View
 } from 'react-native';
 
+
+const styles = StyleSheet.create({
+    button: {
+        borderRadius: 20,
+        backgroundColor: "#009f3c",
+        alignItems: "center",
+    },
+})
 
 function FlatButton({ onPress }) {
     return (
@@ -18,34 +25,36 @@ function FlatButton({ onPress }) {
             </View>
         </TouchableOpacity>
     )
+
 }
 
-const styles = StyleSheet.create({
-    button: {
-        borderRadius: 20,
-        backgroundColor: "#009f3c",
-        alignItems: "center",
-    },
-
-
-})
 
 export default class RestartButton extends Component {
+    constructor(props) {
+        super(props);
+        this.restart_function = this.restart_function.bind(this);
+    }
+
     render() {
         return (
-            <FlatButton onPress={this.myfunction} />
+            <FlatButton onPress={this.restart_function} />
         )
     }
 
-    // my_image() {
-    //     return (
-    //         <div>
-    //             <FlatButton text="Reset" onPress={this.myfunction} />
-    //         </div>
-    //     )
+    // componentWillMount() {
+    //     // Load list first time
+    //     this.props.onRestart()
     // }
 
-    myfunction() {
+    restart_function() {
         console.log("CLICKED");
+    }
+}
+
+
+
+const mapDispathToProps = dispatch => {
+    return {
+        onRestart: () => dispatch({ type: "ADD_COUNTER" })
     }
 }
