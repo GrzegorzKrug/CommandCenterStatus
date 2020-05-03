@@ -5,19 +5,15 @@ import {
 } from 'react-native';
 
 
-function FlatButton({onPress }) {
+function FlatButton({ onPress }) {
     return (
         <TouchableOpacity onPress={onPress} >
             <View style={styles.button}>
-                {/* <Text styles={styles.buttontext}> */}
-                {/* {text} */}
-                {/* </Text> */}
                 <Image source={require("./pics/restart-button.png")}
                     style={{
                         width: 35,
                         height: 35,
                         marginHorizontal: 20,
-                        // flex: 0 1,                  
                     }} />
             </View>
         </TouchableOpacity>
@@ -27,27 +23,17 @@ function FlatButton({onPress }) {
 const styles = StyleSheet.create({
     button: {
         borderRadius: 20,
-        // paddingVertical: 10,
-        // paddingHorizontal: 10,
         backgroundColor: "#009f3c",
+        alignItems: "center",
     },
 
-    buttontext: {
-        color: '#F00',
-        fontWeight: 'bold',
-        // textTransform: 'uppercase',
-        fontSize: 20,
-        textAlign: 'center',
-    },
 
 })
 
 export default class RestartButton extends Component {
     render() {
         return (
-            <div className="center">
-                <FlatButton onPress={this.myfunction} />
-            </div>
+            <FlatButton onPress={this.myfunction} />
         )
     }
 

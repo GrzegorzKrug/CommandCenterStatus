@@ -46,7 +46,7 @@ import "chart.js"
 // }
 function MyKickChart() {
     const my_data = [
-        { name: "Line-1", color: "#4DF", data: Getdata(-0.01, 0.4, 2, 0, 10) },
+        { name: "Line-1", color: "#4DE", data: Getdata(-0.01, 0.4, 2, 0, 10) },
         { name: "Line-2", color: "#03B", data: Getdata(0.01, -1, 0.5, 1, 10) }
     ]
 
