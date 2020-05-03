@@ -8,6 +8,7 @@ import './status_overlay.css';
 
 
 export default class StatusOverlay extends Component {
+
     render() {
         return (
             <div className="overlay">

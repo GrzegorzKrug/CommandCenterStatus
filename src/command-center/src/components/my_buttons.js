@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     Image, StyleSheet, TouchableOpacity, View
 } from 'react-native';
+import { connect } from 'react-redux';
 
 
 const styles = StyleSheet.create({
@@ -29,23 +30,31 @@ function FlatButton({ onPress }) {
 }
 
 
-export default class RestartButton extends Component {
+class RestartButton extends Component {
     constructor(props) {
         super(props);
     }
 
     render(onPress) {
         return (
-            <FlatButton onPress={this.dummy_press}/>
+            <FlatButton onPress={this.button_go_restart} />
         )
     }
 
-    // componentWillMount() {
-    //     // Load list first time
-    //     this.props.onRestart()
-    // }
     dummy_press() {
-        console.log("CLICKED");
+        console.log("dummy_press:restart");
+        // this.onRestart()
     }
 }
 
+
+const mapDispachToProps = disaptch => {
+    return {
+        button_go_restart: () => disaptch({ type: "RESTART" })
+    };
+};
+
+export default connect(
+    null,
+    mapDispachToProps
+)(RestartButton)

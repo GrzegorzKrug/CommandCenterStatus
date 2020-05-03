@@ -10,25 +10,25 @@ import './App.css';
 
 
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {    
     return (
-      <StatusOverlay />
+      <StatusOverlay />      
     );
   }
 }
 
-const mapDispachToProps = dispatch => {
-  return {
-    onRestart: () => dispatch({ type: "RESTART", }),
-  };
-};
+// const mapDispachToProps = dispatch => {
+//   return {
+//     onRestart: () => dispatch({ type: "RESTART", }),
+//   };
+// };
 
 
-export default connect(
-  mapDispachToProps
-)(App);
+// export default connect(
+//   null
+// )(App);
