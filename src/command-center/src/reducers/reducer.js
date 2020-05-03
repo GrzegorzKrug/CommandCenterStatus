@@ -5,15 +5,15 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     const newState = { ...state }
-    console.log("reducer:")
+      
     switch (action.type) {
-        case 'RESTART':
+        case 'COUNTER':
             console.log("Adding counter")
             newState.counter += 1
             return newState
 
         default:
-            console.log("DEFAULT REDUCER!")
+            console.log("Default reducer.")
             return state
     }
 

@@ -8,9 +8,6 @@ import './status_overlay.css';
 
 
 export default class StatusOverlay extends Component {
-    constructor(props) {
-        super(props)
-    }
     render() {
         return (
             <div className="overlay">
@@ -47,5 +44,4 @@ export default class StatusOverlay extends Component {
         )
     }
 }
-
 
