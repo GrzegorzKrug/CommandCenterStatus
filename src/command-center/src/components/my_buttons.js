@@ -103,7 +103,7 @@ export class XButton extends Component {
     render() {
         return (
             <TouchableOpacity onPress={this.props.onPress} >
-                <View style={[styles.button_with_text, { backgroundColor: "#F55" }]}>
+                <View style={[styles.button_with_text, { backgroundColor: "#F36" }]}>
                     <Text style={styles.text_in_button}>
                         X
                     </Text>
@@ -117,7 +117,7 @@ export class OkButton extends Component {
     render() {
         return (
             <TouchableOpacity onPress={this.props.onPress} >
-                <View style={[styles.button_with_text, { backgroundColor: "#0F3" }]}>
+                <View style={[styles.button_with_text, { backgroundColor: "#6F4" }]}>
                     <Text style={styles.text_in_button}>
                         Ok
                     </Text>
