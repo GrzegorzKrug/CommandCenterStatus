@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     },
 })
 
+
 function FlatButton({ onPress }) {
     return (
         <TouchableOpacity onPress={onPress} >
@@ -26,8 +27,8 @@ function FlatButton({ onPress }) {
             </View>
         </TouchableOpacity>
     )
-
 }
+
 
 class RestartButton extends Component {
     constructor(props) {
@@ -36,19 +37,10 @@ class RestartButton extends Component {
 
     render() {
         return (
-            <FlatButton onPress={this.props.onRestart} />
+            <FlatButton onPress={this.props.onClick} />
         )
     }
 }
 
-const mapDispachToProps = disaptch => {
-    return {
-        onRestart: () => disaptch({ type: "RESTART" })
-    };
-};
 
-
-export default connect(
-    null,
-    mapDispachToProps
-)(RestartButton)
+export default RestartButton;
