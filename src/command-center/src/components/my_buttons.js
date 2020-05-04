@@ -29,19 +29,17 @@ function FlatButton({ onPress }) {
 
 }
 
-
 class RestartButton extends Component {
     constructor(props) {
         super(props);
     }
 
-    render(onPress) {
+    render() {
         return (
             <FlatButton onPress={this.props.onRestart} />
         )
     }
 }
-
 
 const mapDispachToProps = disaptch => {
     return {
