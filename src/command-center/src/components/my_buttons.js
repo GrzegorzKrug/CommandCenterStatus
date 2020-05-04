@@ -35,22 +35,11 @@ class RestartButton extends Component {
         super(props);
     }
 
-    render(onPress) {
+    render(onClick) {
         return (
-            <FlatButton onPress={this.props.onRestart} />
+            <FlatButton onPress={onClick} />
         )
     }
 }
 
-
-const mapDispachToProps = disaptch => {
-    return {
-        onRestart: () => disaptch({ type: "RESTART" })
-    };
-};
-
-
-export default connect(
-    null,
-    mapDispachToProps
-)(RestartButton)
+export default RestartButton;
