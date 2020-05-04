@@ -34,7 +34,8 @@
   margin: 4px;
   /* padding-top: 10px; */
   /* padding-bottom: 10px; */
-  align-items: stretch;
+  /* align-items: stretch; */
+  
 }
 
 .clock {
@@ -45,20 +46,7 @@
   margin: 4px;
 }
 
-/* .main {
-  text-align: left;
-  background: deepskyblue;
-}
-
-.aside-1 {
-  background: gold;
-}
-
-.aside-2 {
-  background: hotpink;
-} */
-
-@media all and (min-width: 1000px) {
+@media all and (min-width: 700px) {
   .header {
     display: flex;
   }
@@ -75,7 +63,6 @@
     display: flex;
   }
 }
-
 
 .tablebody {
   background-color: #24A;
@@ -103,6 +90,12 @@
 
 .db_buttons {
   background-color: rgb(228, 76, 56);
+  display: flex;
+  align-items: stretch;
+}
+
+.db_button {
+  flex: 1;
 }
 
 .db_stats {
@@ -143,4 +136,3 @@
     transform: rotate(360deg);
   }
 }
-
