@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
     Image, StyleSheet, TouchableOpacity, View
 } from 'react-native';
-import { connect } from 'react-redux';
 
 
 const styles = StyleSheet.create({
@@ -31,10 +30,6 @@ function FlatButton({ onPress }) {
 
 
 class RestartButton extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <FlatButton onPress={this.props.onClick} />

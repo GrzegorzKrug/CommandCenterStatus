@@ -5,11 +5,12 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     const newState = { ...state }
-      
+
     switch (action.type) {
         case 'COUNTER':
-            console.log("Adding counter")
             newState.counter += 1
+            console.log("Adding counter", newState.counter)
+
             return newState
 
         default:

@@ -8,10 +8,6 @@ import './status_overlay.css';
 
 
 class StatusOverlay extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <div className="overlay">
@@ -52,6 +48,12 @@ class StatusOverlay extends Component {
     }
 }
 
+const mapState = state => {
+    return {
+
+    };
+};
+
 const mapDispatch = dispatch => {
     return {
         onRestart: () => dispatch({ type: "RESTART" })
@@ -59,6 +61,6 @@ const mapDispatch = dispatch => {
 }
 
 export default connect(
-    null,
+    mapState,
     mapDispatch
 )(StatusOverlay)

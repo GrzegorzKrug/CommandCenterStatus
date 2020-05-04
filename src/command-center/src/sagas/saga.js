@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { put, takeLatest, call, all } from 'redux-saga/effects'
+// import axios from 'axios';
+import { put, takeLatest } from 'redux-saga/effects'
 
 
 function* makeRestart() {
