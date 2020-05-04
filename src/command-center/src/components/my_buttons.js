@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     },
 })
 
+
 function FlatButton({ onPress }) {
     return (
         <TouchableOpacity onPress={onPress} >
@@ -26,7 +27,6 @@ function FlatButton({ onPress }) {
             </View>
         </TouchableOpacity>
     )
-
 }
 
 
@@ -35,11 +35,12 @@ class RestartButton extends Component {
         super(props);
     }
 
-    render(onClick) {
+    render() {
         return (
-            <FlatButton onPress={onClick} />
+            <FlatButton onPress={this.props.onClick} />
         )
     }
 }
+
 
 export default RestartButton;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Container } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import MiniClock from './components/clock';
 import { LineGraph } from './components/graphs';
 import RestartButton from './components/my_buttons.js';
@@ -7,13 +7,17 @@ import RestartButton from './components/my_buttons.js';
 import './status_overlay.css';
 
 
-export default class StatusOverlay extends Component {
+class StatusOverlay extends Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <div className="overlay">
                 <header className="header">
                     <aside className="restart-button">
-                        <RestartButton onClick={this.print} />
+                        <RestartButton onClick={this.props.onRestart} />
                     </aside>
                     <aside className="title">
                         Hello
@@ -43,8 +47,18 @@ export default class StatusOverlay extends Component {
             </div>
         )
     }
-    print() {
-        console.log("Hi")
+    status_print() {
+        console.log("Status hi")
     }
 }
 
+const mapDispatch = dispatch => {
+    return {
+        onRestart: () => dispatch({ type: "RESTART" })
+    }
+}
+
+export default connect(
+    null,
+    mapDispatch
+)(StatusOverlay)
