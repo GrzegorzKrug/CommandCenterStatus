@@ -15,10 +15,10 @@ class StatusOverlay extends Component {
                     <aside className="restart-button">
                         <RestartButton onPress={this.props.onRestart} />
                     </aside>
-                    <aside className="title">
-                        <Text style={{ backgroundColor: "#FCA" }}>
+                    <aside className="titleField">
+                        <div className="titleText">
                             Hello
-                        </Text>
+                        </div>
                     </aside>
                     <aside className="clock">
                         <MiniClock />
